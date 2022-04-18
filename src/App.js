@@ -1,25 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-const Father = styled.div`
+const Wrapper = styled.div`
   display: flex;
+  width: 100vh;
+  height: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
-`;
-
-const Text = styled.span`
-  color: white;
+const Title = styled.div`
+  font-size: 36px;
+  color: ${(props) => props.theme.textColor};
 `;
 
 function App() {
   return (
-    <Father>
-      <Box bgColor="teal" />
-      <Box bgColor="tomato" />
-    </Father>
+    <Wrapper>
+      <Title>text</Title>
+    </Wrapper>
   );
 }
 
